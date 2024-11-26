@@ -1,0 +1,1 @@
+seed data for the AirBnB-like database
