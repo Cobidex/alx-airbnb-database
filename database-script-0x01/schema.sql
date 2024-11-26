@@ -23,8 +23,6 @@ CREATE TABLE Property (
     FOREIGN KEY (host_id) REFERENCES User(user_id)
 );
 
-CREATE INDEX idx_property_host_id ON Property (host_id);
-
 CREATE TABLE Booking (
     booking_id UUID PRIMARY KEY,
     property_id UUID NOT NULL,
@@ -39,7 +37,6 @@ CREATE TABLE Booking (
 );
 
 CREATE INDEX idx_booking_property_id ON Booking (property_id);
-CREATE INDEX idx_booking_user_id ON Booking (user_id);
 
 CREATE TABLE Payment (
     payment_id UUID PRIMARY KEY,
@@ -63,9 +60,6 @@ CREATE TABLE Review (
     FOREIGN KEY (user_id) REFERENCES User(user_id)
 );
 
-CREATE INDEX idx_review_property_id ON Review (property_id);
-CREATE INDEX idx_review_user_id ON Review (user_id);
-
 CREATE TABLE Message (
     message_id UUID PRIMARY KEY,
     sender_id UUID NOT NULL,
@@ -75,6 +69,3 @@ CREATE TABLE Message (
     FOREIGN KEY (sender_id) REFERENCES User(user_id),
     FOREIGN KEY (recipient_id) REFERENCES User(user_id)
 );
-
-CREATE INDEX idx_message_sender_id ON Message (sender_id);
-CREATE INDEX idx_message_recipient_id ON Message (recipient_id);
