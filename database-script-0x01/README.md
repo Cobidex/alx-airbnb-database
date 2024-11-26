@@ -1,0 +1,1 @@
+Sql for creating the needed tables in the database
