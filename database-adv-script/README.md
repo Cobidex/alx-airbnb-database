@@ -1,0 +1,1 @@
+sql queries to for join, left join and full outer join
