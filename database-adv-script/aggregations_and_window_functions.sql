@@ -1,0 +1,1 @@
+SELECT *, (SELECT COUNT(*) FROM Booking b WHERE b.user_id = u.id) AS booking_count FROM User u;
