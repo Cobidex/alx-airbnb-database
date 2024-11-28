@@ -3,7 +3,7 @@ WHERE p.id IN
   (
     SELECT r.property_id FROM Review r
     GROUP BY r.property_id
-    HAVING AVG(r.rating) > 4
+    HAVING AVG(r.rating) > 4.0
     );
 
 SELECT * FROM User u
