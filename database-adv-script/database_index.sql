@@ -1,8 +1,8 @@
-EXPLAIN SELECT * FROM User WHERE id = 1;
+EXPLAIN ANALYZE SELECT * FROM User WHERE id = 1;
 
-EXPLAIN SELECT * FROM Booking WHERE user_id = 1 AND property_id = 1;
+EXPLAIN ANALYZE SELECT * FROM Booking WHERE user_id = 1 AND property_id = 1;
 
-EXPLAIN SELECT * FROM Properties WHERE host_id = 1;
+EXPLAIN ANALYZE SELECT * FROM Properties WHERE host_id = 1;
 
 
 CREATE INDEX user_id_index ON User (id);
