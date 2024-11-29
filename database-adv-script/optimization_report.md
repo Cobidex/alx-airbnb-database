@@ -1,0 +1,1 @@
+This adds an index on the JOIN columns in order to optimize the query
